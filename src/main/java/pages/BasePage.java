@@ -104,6 +104,9 @@ public class BasePage {
         ArrayList<String> tab = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tab.get(1));
     }
+    public void switchAlertOK(){
+        driver.switchTo().alert().accept();
+    }
 
 
 }
