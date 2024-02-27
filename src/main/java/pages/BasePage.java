@@ -81,5 +81,19 @@ public class BasePage {
         return number;
     }
 
+    public void clickInput(int number, By elementBy, String id){
+        WebElement element = driver.findElement(elementBy);
+        clickElement(element);
+//        clickElement(element.findElement(By.xpath("//option[@value= '"+number+"' ]")));
+
+        clickElement(By.xpath("//select[@id='"+ id +"']//option[@value='"+ number+ "']"));
+    }
+
+    //
+    public String readTextFromLable(int number, String id){
+        String text = readText(By.xpath("//select[@id='"+ id +"']//option[@value='"+ number+ "']"));
+        return text;
+    }
+
 
 }
