@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.util.ArrayList;
 
 
 public class BasePage {
@@ -93,6 +94,15 @@ public class BasePage {
     public String readTextFromLable(int number, String id){
         String text = readText(By.xpath("//select[@id='"+ id +"']//option[@value='"+ number+ "']"));
         return text;
+    }
+
+    public void checkCorrectLink(By elementBy, String text){
+        assertStringEquals(driver.findElement(elementBy).getAttribute("href"), text);
+    }
+
+    public void switchToNextTab() {
+        ArrayList<String> tab = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(tab.get(1));
     }
 
 

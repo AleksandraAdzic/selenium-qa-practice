@@ -16,10 +16,9 @@ public class NewTabLinkPage extends BasePage{
         clickElement(linkToNewPageBy);
     }
     public void chekLink(){
-        assertStringEquals(driver.findElement(linkToNewPageBy).getAttribute("href"), "https://www.qa-practice.com/elements/new_tab/new_page");
+        checkCorrectLink(linkToNewPageBy, "https://www.qa-practice.com/elements/new_tab/new_page");
     }
-    public void switchToNextTab() {
-        ArrayList<String> tab = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(tab.get(1));
+    public void switchToNewTab() {
+        switchToNextTab();
     }
 }

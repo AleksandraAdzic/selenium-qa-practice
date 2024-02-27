@@ -12,7 +12,7 @@ public class NewTabLinkTest extends BaseTest{
         NewTabLinkPage newTabLinkPage = new NewTabLinkPage(driver);
         newTabLinkPage.chekLink();
         newTabLinkPage.clickLinkToNewPage();
-        newTabLinkPage.switchToNextTab();
+        newTabLinkPage.switchToNewTab();
         NewTabNewPagePage newTabNewPagePage = new NewTabNewPagePage(driver);
         newTabNewPagePage.verificationNewPage();
     }
