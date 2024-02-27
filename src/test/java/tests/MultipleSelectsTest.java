@@ -2,7 +2,7 @@ package tests;
 
 import org.testng.annotations.Test;
 import pages.MultipleSelectsPage;
-import pages.SingleSelectPage;
+
 
 public class MultipleSelectsTest extends BaseTest{
     @Test
