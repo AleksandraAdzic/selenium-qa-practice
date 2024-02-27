@@ -107,6 +107,9 @@ public class BasePage {
     public void switchAlertOK(){
         driver.switchTo().alert().accept();
     }
+    public void switchAlertCancel(){
+        driver.switchTo().alert().dismiss();
+    }
 
 
 }
