@@ -17,7 +17,7 @@ public class SingleSelectPage extends BasePage{
 
 
     public void checkFieldName(){
-        Assert.assertTrue(readText(fieldNameBy).contains("Choose language"));
+        checkNameOfField(fieldNameBy, "Choose language");
     }
 
     public void checkIfFieldIsRequired(){
