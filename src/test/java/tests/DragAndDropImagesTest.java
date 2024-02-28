@@ -1,7 +1,6 @@
 package tests;
 
 import org.testng.annotations.Test;
-import pages.BasePage;
 import pages.DragAndDropImagesPage;
 
 public class DragAndDropImagesTest extends BaseTest {
