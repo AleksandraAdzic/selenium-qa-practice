@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -109,6 +110,14 @@ public class BasePage {
     }
     public void switchAlertCancel(){
         driver.switchTo().alert().dismiss();
+    }
+
+
+    public void dragAndDrop(String From, String To){
+        Actions builder = new Actions(driver);
+        WebElement from = driver.findElement(By.id(From));
+        WebElement to = driver.findElement(By.id(To));
+        builder.dragAndDrop(from, to).perform();
     }
 
 
