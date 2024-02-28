@@ -127,5 +127,9 @@ public class BasePage {
         builder.dragAndDrop(from, to).perform();
     }
 
+    public void checkNameOfField(By elementBy, String text){
+        Assert.assertTrue(readText(elementBy).contains(text));
+    }
+
 
 }
