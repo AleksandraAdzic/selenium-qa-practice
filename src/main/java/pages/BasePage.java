@@ -120,5 +120,12 @@ public class BasePage {
         builder.dragAndDrop(from, to).perform();
     }
 
+    public void dragAndDropImage(String From, String To){
+        Actions builder = new Actions(driver);
+        WebElement from = driver.findElement(By.xpath(From));
+        WebElement to = driver.findElement(By.id(To));
+        builder.dragAndDrop(from, to).perform();
+    }
+
 
 }
