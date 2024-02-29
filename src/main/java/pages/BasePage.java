@@ -1,5 +1,6 @@
 package pages;
 
+import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -131,5 +132,18 @@ public class BasePage {
         Assert.assertTrue(readText(elementBy).contains(text));
     }
 
+    public String writeTextInTextArea(By elementBy){
+        clickElement(elementBy);
+        Faker faker = new Faker();
+        String text = faker.lorem().sentence();
+        enterText(elementBy, text);
+        return text;
+    }
+
+    public void waitToBeActiv(By elementBy){
+        WebElement element = driver.findElement(elementBy);
+        Actions action = new Actions(driver);
+        action.moveToElement(element).click().perform();
+    }
 
 }
