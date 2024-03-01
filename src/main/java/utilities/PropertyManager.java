@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 public class PropertyManager {
-    private static String invalidEmail;
+    private static String invalidEmail, invalidPassword, validPassword;
     private static PropertyManager instance;
 
     public static PropertyManager getInstance() {
@@ -27,9 +27,17 @@ public class PropertyManager {
         }
 
         invalidEmail = properties.getProperty("invalidEmail");
+        invalidPassword = properties.getProperty("invalidPassword");
+        validPassword = properties.getProperty("validPassword");
     }
 
     public String getInvalidEmail() {
         return invalidEmail;
+    }
+    public String getInvalidPassword(){
+        return invalidPassword;
+    }
+    public String getValidPassword(){
+        return validPassword;
     }
 }
